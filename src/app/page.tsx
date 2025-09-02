@@ -1,4 +1,18 @@
 export default function Page() {
+  const mail = (subject: string) =>
+    `mailto:E@BloomPathHealth.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(
+      `Hi BloomPath team,
+
+I’d like to connect about this request.
+
+- Name:
+- Organization (if any):
+- Phone:
+- Notes:
+
+Thanks!`
+    )}`;
+
   return (
     <div className="font-sans text-gray-800">
       {/* Hero Section */}
@@ -7,15 +21,22 @@ export default function Page() {
           Closing the Pediatric Obesity Treatment Gap
         </h1>
         <p className="text-lg md:text-xl max-w-2xl mx-auto mb-8">
-          BloomPath Health delivers scalable, AI-powered programs that meet AAP/USPSTF recommendations and payer coverage mandates — while empowering families to live healthier lives.
+          BloomPath Health delivers scalable, AI-powered programs that meet AAP/USPSTF
+          recommendations and payer coverage mandates — while empowering families to live healthier lives.
         </p>
         <div className="flex justify-center gap-4">
-          <button className="bg-white text-teal-600 font-semibold py-3 px-6 rounded-2xl shadow-md hover:bg-gray-100 transition">
+          <a
+            href={mail("Get Started Today - BloomPath Health")}
+            className="bg-white text-teal-600 font-semibold py-3 px-6 rounded-2xl shadow-md hover:bg-gray-100 transition"
+          >
             Get Started
-          </button>
-          <button className="bg-transparent border border-white py-3 px-6 rounded-2xl font-semibold hover:bg-white hover:text-teal-600 transition">
+          </a>
+          <a
+            href={mail("Partner With Us - BloomPath Health")}
+            className="bg-transparent border border-white py-3 px-6 rounded-2xl font-semibold hover:bg-white hover:text-teal-600 transition"
+          >
             Partner With Us
-          </button>
+          </a>
         </div>
       </section>
 
@@ -23,7 +44,8 @@ export default function Page() {
       <section className="py-16 px-6 text-center bg-gray-50">
         <h2 className="text-3xl font-bold mb-6">Why It Matters</h2>
         <p className="max-w-2xl mx-auto text-lg mb-8">
-          Less than 1% of eligible children get access to the care they need. Childhood obesity continues to rise, creating long-term health and economic consequences.
+          Less than 1% of eligible children get access to the care they need. Childhood obesity
+          continues to rise, creating long-term health and economic consequences.
         </p>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
           <div className="p-6 bg-white shadow rounded-2xl">
@@ -70,9 +92,12 @@ export default function Page() {
           <p>Ongoing progress tracking and rewards</p>
         </div>
         <div className="text-center mt-6">
-          <button className="bg-teal-600 text-white py-3 px-6 rounded-2xl font-semibold shadow hover:bg-teal-700 transition">
+          <a
+            href={mail("Get Started Today - BloomPath Health")}
+            className="bg-teal-600 text-white py-3 px-6 rounded-2xl font-semibold shadow hover:bg-teal-700 transition"
+          >
             See How It Works
-          </button>
+          </a>
         </div>
       </section>
 
@@ -86,9 +111,12 @@ export default function Page() {
           <p>Real-time outcomes dashboards</p>
         </div>
         <div className="text-center mt-6">
-          <button className="bg-teal-600 text-white py-3 px-6 rounded-2xl font-semibold shadow hover:bg-teal-700 transition">
+          <a
+            href={mail("Request a Demo - BloomPath Health")}
+            className="bg-teal-600 text-white py-3 px-6 rounded-2xl font-semibold shadow hover:bg-teal-700 transition"
+          >
             Request a Demo
-          </button>
+          </a>
         </div>
       </section>
 
@@ -98,12 +126,18 @@ export default function Page() {
           Let’s Build a Healthier Future for Kids — Together
         </h2>
         <div className="flex justify-center gap-4">
-          <button className="bg-white text-teal-600 font-semibold py-3 px-6 rounded-2xl shadow-md hover:bg-gray-100 transition">
+          <a
+            href={mail("Get Started Today - BloomPath Health")}
+            className="bg-white text-teal-600 font-semibold py-3 px-6 rounded-2xl shadow-md hover:bg-gray-100 transition"
+          >
             Get Started Today
-          </button>
-          <button className="bg-transparent border border-white py-3 px-6 rounded-2xl font-semibold hover:bg-white hover:text-teal-600 transition">
+          </a>
+          <a
+            href={mail("Book a Demo - BloomPath Health")}
+            className="bg-transparent border border-white py-3 px-6 rounded-2xl font-semibold hover:bg-white hover:text-teal-600 transition"
+          >
             Book a Demo
-          </button>
+          </a>
         </div>
       </section>
 
