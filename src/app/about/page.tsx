@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function AboutPage() {
   const mail = (subject: string) =>
     `mailto:E@BloomPathHealth.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(
@@ -215,17 +217,18 @@ Thanks!`
       </section>
 
       {/* Footer (same as homepage, with About link active) */}
-      <footer className="bg-gray-900 text-gray-300 py-10 px-6 text-center">
-        <p className="mb-4">BloomPath Health © {new Date().getFullYear()}</p>
-        <div className="flex justify-center gap-6 text-sm">
-          <a href="/" className="hover:text-white">Home</a>
-          <a href="/about" className="hover:text-white">About</a>
-          <a href="#" className="hover:text-white">Program</a>
-          <a href="#" className="hover:text-white">Partners</a>
-          <a href="#" className="hover:text-white">Contact</a>
-        </div>
-        <p className="mt-6 text-xs">HIPAA Compliant • SOC2 Certified • Privacy Policy</p>
-      </footer>
+<footer className="bg-gray-900 text-gray-300 py-10 px-6 text-center">
+  <p className="mb-4">BloomPath Health © {new Date().getFullYear()}</p>
+  <div className="flex justify-center gap-6 text-sm">
+    <Link href="/" className="hover:text-white">Home</Link>
+    <Link href="/about" className="hover:text-white">About</Link>
+    <Link href="/program" className="hover:text-white">Program</Link>
+    <Link href="/partners" className="hover:text-white">Partners</Link>
+    <Link href="/contact" className="hover:text-white">Contact</Link>
+  </div>
+  <p className="mt-6 text-xs">HIPAA Compliant • SOC2 Certified • Privacy Policy</p>
+</footer>
+
     </div>
   );
 }
